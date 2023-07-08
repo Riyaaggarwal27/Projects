@@ -21,37 +21,34 @@ def click(event):
         scvalue.set(scvalue.get()+text)
         screen.update()
 root.geometry("400x570")
-# root.minsize(400,400)
-# root.maxsize(600,600)
+
 root.title("Calculator")
 ############
-# root.wm_iconbitmap("1.ico")
+
 
 scvalue=StringVar()
 scvalue.set("")
 screen=Entry(root,text=scvalue,font="lucida 40 bold",width=3,bg="black",fg="wheat")
-screen.pack(ipadx=150,pady=10,padx=10)#ipadx means screen width from both sides 
+screen.pack(ipadx=150,pady=10,padx=10) 
 
 f=Frame(root)
 b=Button(f,text="%",font="lucida 35 bold",bg="black",fg="wheat",width=3)
-# b.grid(row=0,column=0,sticky="NSEW")
+
 b.pack(side=LEFT)
 b.bind('<Button>',click)
 
 
 b=Button(f,text="CE",font="lucida 35 bold",bg="black",fg="wheat",width=3)
-# b.grid(row=0,column=1,sticky="NSEW")
+
 b.pack(side=LEFT)
 b.bind('<Button>',click)
 
 
 b=Button(f,text="C",font="lucida 35 bold",bg="black",fg="wheat",width=3)
-# b.grid(row=0,column=2,sticky="NSEW")
 b.pack(side=LEFT)
 b.bind('<Button>',click)
 
 b=Button(f,text="/",font="lucida 35 bold",bg="black",fg="wheat",width=3)
-# b.grid(row=0,column=3,sticky="NSEW")
 b.pack(side=LEFT)
 b.bind('<Button>',click)
 
